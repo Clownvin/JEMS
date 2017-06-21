@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<script>
+	function verify() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		if (username.length == 0 || password.length == 0) {
+			document.getElementById("loginError").innerHTML = "You must include a username and password.";
+		} else {
+			var xmlhttp = new XMLHttpRequest();
+        	xmlhttp.onreadystatechange = function() {
+				//4 = finished, 200 = found. 404! 404 NF!!!!
+            	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					if(xmlhttp.responseText == 0) {
+						document.getElementById("loginError").innerHTML = "Invalid username/password";
+					} else {
+						window.location = "http://localhost/main.php";
+					}
+            	}
+        	};
+        	xmlhttp.open("GET", "./Verify.php?username=" + username + "&password=" + password, true);
+        	xmlhttp.send();
+		}
+	}
+</script>
+<html>
+	<head>
+		<title> Login </title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="flex-parent-center">
+			<div class="login-container">
+	<p><span class="login-header"> Login</span></p>
+				<p>
+
+				  <form method="post" class="login-content">
+				  <label for="username"> USERNAME </label>
+				  <br />
+				  <input type="text" name="username" id="username" placeholder="Enter your username" autocomplete="off" minlength="5" maxlength="32" required /><br />
+				  <br />
+
+				  <label for="password"> PASSWORD </label>
+				  <br />
+				  <input type="password" name="password" id="password" placeholder="Enter your password" minlength="6" maxlength="255" required /><br />
+				  <br />
+				  <div id="loginError"></div>
+
+    </p>
+				<div style="text-align: right">
+					<input id = "loginButton" type="button" value="Log in" onclick="verify();" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

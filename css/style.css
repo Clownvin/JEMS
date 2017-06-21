@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Play);
+
+input {
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+
+	background-image: url("/images/crossword.png");
+	font-family: play;
+}
+
+div.content {
+	display: inline-block;
+}
+
+
+.flex-parent-center {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	resize: both;
+}
+
+.login-container {
+	width: 400px;
+	background-color: #ffffff;
+	box-shadow: 0 0 3px #ccc;
+}
+
+
+.login-header {
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	padding: 7px;
+	background-color: #07B1ED;
+	color: #ffffff;
+	cursor: default;
+}
+
+.login-content {
+	font-size: 14px;
+	padding: 20px 50px;
+	color: #88888c;
+}
+
+.login-content input[type="text"],
+.login-content input[type="password"] {
+	width: 95%;
+	padding: 2.5%;
+	border: 1px solid #88888c;
+	color: #88888c;
+	font-size: 14px;
+}
+
+.login-content input[type="text"]:focus,
+.login-content input[type="text"]:active,
+.login-content input[type="password"]:focus,
+.login-content input[type="password"]:active {
+	color: #000000;
+	border-color: #000000;
+}
+
+.login-content input[type="button"] {
+	padding: 10px;
+	background-color: #07B1ED;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+}
+
+.login-content input[type="button"]:hover {
+	background-color: #ee0000;
+}
+
+.login-content input[type="button"]:active {
+	box-shadow: inset 0 0 4px #330000;
+}
+
+.container {
+	background-color: #ffffff;
+	box-shadow: 0 0 3px #ccc;
+}
+
+
+.header {
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	padding: 7px;
+	background-color: #07B1ED;
+	color: #ffffff;
+	cursor: default;
+}
+
+.footer {
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	padding: 7px;
+	background-color: #07B1ED;
+	color: #ffffff;
+	cursor: default;
+	float: none;
+}
+
+.content {
+	font-size: 14px;
+	padding: 20px 50px;
+	color: #000000;
+}
+
+.content input[type="text"],
+.content input[type="password"] {
+	width: 95%;
+	padding: 2.5%;
+	border: 1px solid #88888c;
+	color: #88888c;
+	font-size: 14px;
+}
+
+.header input[type="text"],
+.header input[type="password"] {
+	width: 95%;
+	padding: 2.5%;
+	border: 1px solid #88888c;
+	color: #88888c;
+	font-size: 14px;
+}
+
+.content input[type="text"]:focus,
+.content input[type="text"]:active,
+.content input[type="password"]:focus,
+.content input[type="password"]:active {
+	color: #000000;
+	border-color: #000000;
+}
+
+.header input[type="text"]:focus,
+.header input[type="text"]:active,
+.header input[type="password"]:focus,
+.header input[type="password"]:active {
+	color: #000000;
+	border-color: #000000;
+}
+
+.content input[type="button"] {
+	padding: 10px;
+	background-color: #07B1ED;
+	color: #ffffff;
+	border: solid;
+	border-width: 1px;
+	border-color: #0791FF;
+	cursor: pointer;
+}
+
+.content input[type="button"]:hover {
+	background-color: #0791FF;
+}
+
+.content input[type="button"]:active {
+	box-shadow: inset 0 0 4px #330000;
+}
+
+.content input[type="text"],
+.content input[type="password"],
+.content textarea {
+	width: 300px;
+}
+
+.header input[type="button"] {
+	padding: 10px;
+	background-color: #07B1ED;
+	color: #ffffff;
+	border: solid;
+	border-width: 1px;
+	border-color: #0791FF;
+	cursor: pointer;
+}
+
+.header input[type="button"]:hover {
+	background-color: #0791FF;
+}
+
+.header input[type="button"]:active {
+	box-shadow: inset 0 0 4px #330000;
+}
+
+div {
+	vertical-align: top;
+}
